@@ -31,6 +31,12 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
       - assets/img/mars.png
+      - assets/img/neptune.png
+      - assets/img/moon.png
+      - assets/img/earth.png
+      - assets/img/mercury.png
+      - assets/img/ic_distance.png
+      - assets/img/ic_gravity.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
@@ -58,9 +64,7 @@ flutter:
   # For details regarding fonts from package dependencies, 
   # see https://flutter.io/custom-fonts/#from-packages
   fonts:
-      - family: Poppins
-        fonts:
-          - asset: assets/fonts/Poppins-SemiBold.ttf
-            weight: 600
-
-
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
