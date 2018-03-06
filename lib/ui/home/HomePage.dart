@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:planets_flutter/ui/home/GradientAppBar.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -11,6 +10,32 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           new GradientAppBar("treva"),
         ],
+      ),
+    );
+  }
+}
+
+class GradientAppBar extends StatelessWidget {
+  final String title;
+  final double barHeight = 66.0;
+
+
+  GradientAppBar(this.title);
+
+  @override
+  Widget build(BuildContext context) {
+    final double statusBarHeight = MediaQuery
+        .of(context)
+        .padding
+        .top;
+    return new Container(
+      padding: new EdgeInsets.only(top: statusBarHeight),
+      height: statusBarHeight + barHeight,
+      decoration: new BoxDecoration(color: Colors.blue),
+      child: new Center(
+        child: new Text(
+          title,
+        ),
       ),
     );
   }
