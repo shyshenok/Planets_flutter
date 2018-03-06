@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:planets_flutter/ui/home/HomePageBody.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -9,11 +9,16 @@ class HomePage extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new GradientAppBar("treva"),
+          new HomePageBody(),
+          new HomePageBody(),
+          new HomePageBody(),
+          new HomePageBody(),
         ],
       ),
     );
   }
 }
+
 
 class GradientAppBar extends StatelessWidget {
   final String title;
@@ -34,12 +39,13 @@ class GradientAppBar extends StatelessWidget {
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
             colors: [
+              const Color(0xFFCCAAEA),
               const Color(0xFF3366FF),
               const Color(0xFF00FFFF),
             ],
             begin: const FractionalOffset(0.0, 0.0),
             end: const FractionalOffset(1.0, 0.0),
-            stops: [0.0, 1.0],
+            stops: [0.0, 0.5, 1.0],
             tileMode: TileMode.clamp
         ),
       ),
