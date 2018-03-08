@@ -22,6 +22,8 @@ class GradientAppBar extends StatelessWidget {
   final double barHeight = 66.0;
 
 
+
+
   GradientAppBar(this.title);
 
   @override
@@ -30,9 +32,20 @@ class GradientAppBar extends StatelessWidget {
         .of(context)
         .padding
         .top;
+
     return new Container(
       padding: new EdgeInsets.only(top: statusBarHeight),
       height: statusBarHeight + barHeight,
+      child: new Center(
+        child: new Text(title,
+            style: const TextStyle(
+                color: Colors.white,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w600,
+                fontSize: 36.0
+            )
+        ),
+      ),
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
             colors: [
@@ -44,17 +57,6 @@ class GradientAppBar extends StatelessWidget {
             end: const FractionalOffset(1.0, 0.0),
             stops: [0.0, 0.5, 1.0],
             tileMode: TileMode.clamp
-        ),
-      ),
-      child: new Center(
-        child: new Text(
-            title,
-            style: const TextStyle(
-                color: Colors.white,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w600,
-                fontSize: 36.0
-            )
         ),
       ),
 
